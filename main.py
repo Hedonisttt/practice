@@ -50,6 +50,9 @@ def bubble_sorting(list):
                 status = True
 
 
+
+
+
 print(*zxc)
 bubble_sorting(zxc)
 print(*zxc)
@@ -57,3 +60,34 @@ zxc[0] , zxc[-1] = zxc[-1], zxc[0]
 print(*zxc)
 
 
+
+
+
+
+"""мини практика, вспоминаю чтобы не забыть"""
+
+class User_reg:
+
+    def __init__(self, login, password):
+        self.login = login
+        self.password = password
+
+    def len_pass(self):
+        str(self.password)
+        if len(self.password) < 7 and self.password != self.login:
+            raise ValueError('Too short')
+
+    def add_file(self):
+        with open('users', 'w+') as file:
+                file.write(f'{self.login, self.password}'+'\n')
+
+
+
+
+
+
+us1 = User_reg('artur', '12332321')
+us2 = User_reg('david', '423564765')
+us3 = User_reg('quester', '7676876897')
+us4 = User_reg('fench', '6546546456')
+us1.add_file()
